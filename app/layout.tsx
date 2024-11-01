@@ -1,5 +1,7 @@
 import React from "react";
 import "@styles/globals.css";
+import Navbar from "@/components/Navbar";
+import Provider from "@/components/Provider";
 
 export const metadata = {
   title: "Promptopea",
@@ -13,7 +15,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="main">
           <div className="gradient" />
         </div>
-        <main className="app">{children}</main>
+        <main className="app">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
